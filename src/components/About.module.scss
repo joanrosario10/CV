@@ -1,0 +1,29 @@
+.avatar {
+  border-radius: 50%;
+  margin: 1.5rem 0 2rem 0;
+  width: 25rem;
+  height: 25rem;
+  z-index: 100;
+}
+
+.description {
+  margin-top: 1rem;
+}
+
+
+@media (min-width: 750px) { 
+  .about {
+    flex-direction: row;
+
+    & .description {
+      margin: 0;
+    }
+
+    & .avatar {
+      margin-right: 2.5rem;
+      float: left;
+      --webkit-shape-outside: circle(50% at 50% 50%);
+      shape-outside: circle(50% at 50% 50%);
+    }
+  }
+ }

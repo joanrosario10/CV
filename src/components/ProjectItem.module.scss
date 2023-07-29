@@ -1,0 +1,127 @@
+.image {
+  max-width: 100%;
+}
+
+.project {
+  padding: 0rem;
+  overflow: hidden;
+  position: relative;
+
+  & .titleAndIcons {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+  }
+
+  & .iconsWrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  & .icons {
+    display: flex;
+    justify-content: space-evenly;
+    width: 30%;
+    margin: 1rem;
+    margin-bottom: 0;
+    font-size: 3rem;
+    margin-right: 0;
+
+    & a {
+      color: inherit;
+    }
+
+    & .icon {
+      transition: all 0.2s;
+
+      &:hover {
+        transform: scale(1.2);
+        color: #e67e22;
+      }
+    }
+  }
+
+  & .image {
+    max-width: 100%;
+    margin-top: 1rem;
+  }
+
+  & .overlay {
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 100;
+  }
+}
+
+@media (min-width: 750px) {
+  .project {
+    & .overlay {
+      transition: all 0.3s;
+      z-index: 10;
+    }
+
+    & .titleAndIcons {
+      display: none;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      flex-direction: column;
+      color: white;
+      z-index: 20;
+
+      & .iconsWrapper {
+        flex-direction: column;
+      }
+
+      & .icons {
+        font-size: 3.5rem;
+      }
+    }
+
+    & .image {
+      transition: all 0.3s;
+      top: 0;
+      left: 0;
+      transform: scale(1.1);
+    }
+
+    & .description {
+      display: none;
+      position: absolute;
+      top: 30%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: white;
+      z-index: 20;
+    }
+
+    &:hover {
+      & .overlay {
+        opacity: 1;
+      }
+      & .image {
+        transform: scale(1.2);
+        filter: blur(2px);
+      }
+
+      & .titleAndIcons {
+        display: flex;
+        opacity: 1;
+      }
+
+      & .description {
+        display: block;
+        opacity: 1;
+      }
+    }
+  }
+}

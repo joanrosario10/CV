@@ -1,0 +1,42 @@
+.footer {
+  width: 100%;
+  background-color: #2d3436;
+  color: #fff;
+  padding: 3rem 2rem;
+  margin-top: -10rem;
+  display: flex;
+  justify-content: center;
+
+  & .footerWrapper {
+    width: 100%;
+  }
+
+  & .footerHover {
+    display: inline-block;
+    transition: all 0.2s;
+
+    &:hover {
+      transform-origin: top left;
+      transform: rotate(-8deg) scale(1.2);
+      background-color: #1b2735;
+      color: #e67e22;
+    }
+  }
+}
+
+
+@media (min-width: 750px) {
+  .footer {
+    width: 100%;
+    background-color: #2d3436;
+    color: #fff;
+    padding: 5rem 10rem;
+    margin-top: -10rem;
+    display: flex;
+    justify-content: center;
+  
+    & .footerWrapper {
+      width: 70%;
+    }
+  }
+}

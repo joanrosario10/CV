@@ -1,0 +1,87 @@
+.stack {
+  display: flex;
+  flex-flow: column;
+
+  .gallery {
+    display: flex;
+    flex-flow: column;
+    gap: 2rem;
+    margin: 2rem 0 3rem 0;
+
+    .row {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    .icon {
+      font-size: 4rem;
+      transition: all 0.3s;
+
+      &:hover {
+        transform: scale(1.3);
+      }
+
+      &.html:hover {
+        color: #e44d26;
+      }
+
+      &.css:hover {
+        color: #3c99dc;
+      }
+
+      &.react:hover {
+        color: #00d4f9;
+      }
+
+      &.js:hover {
+        color: #f0db4f;
+      }
+
+      &.git:hover {
+        color: #ed5132;
+      }
+
+      &.github:hover {
+        color: #9656b1;
+      }
+
+      &.sass:hover {
+        color: #b37399aa;
+      }
+      
+      &.firebase:hover {
+        color: #ffa610;
+      }
+      
+      &.node:hover {
+        color: #3c873a;
+      }
+      
+      &.storybook:hover {
+        color: #fe4685;
+      }
+
+      &.svelte:hover {
+        color: #aa1e1e;
+      }
+
+      &.next:hover {
+        color: #000;
+      }
+
+      &.mongo:hover {
+        color: #4bce0fd8;
+      }
+    }
+  }
+}
+
+@media (min-width: 750px) { 
+  .stack {
+    flex-flow: row;
+    justify-content: space-around;
+  }
+}
